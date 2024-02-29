@@ -1,0 +1,26 @@
+.pokedex{
+    padding-bottom: 25px;
+}
+.poke-header{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    gap: 10px;
+    
+
+}
+.poke-header h3{
+    align-items: center;
+}
+.poke-header div{
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.poke-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
