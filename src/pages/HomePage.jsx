@@ -23,7 +23,7 @@ const HomePage = () => {
       <h1>¡Hola Entrenador!</h1>
       <h2>Para Poder Comenzar, Dame Tu Nombre</h2>
       <form  onSubmit={handleSubmit}>
-        <input type="text" ref={textInput} />
+        <input type="text" ref={textInput} placeholder='Tu nombre...' />
         <button>Comenzar</button>
       </form>
     </div>

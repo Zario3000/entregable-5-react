@@ -2,13 +2,19 @@
     display: flex;
     display: inline-block;
     justify-content: center;
+    
 }
 form{
     display: flex;
     margin: 15px;
     gap: 10px;
 }
-button{
-    background-color: rgb(143, 72, 47);
-    padding: 0 5px;
+h1{
+    color: red;
 }
+button{
+    background-color: red;
+    padding: 0 5px;
+    color: white;
+}
+

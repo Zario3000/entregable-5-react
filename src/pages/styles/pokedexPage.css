@@ -24,3 +24,9 @@
     justify-content: space-evenly;
     gap: 20px;
 }
+.poke-input{
+    padding: 10px;
+}
+.poke-button{
+    padding: 0 30px;
+}

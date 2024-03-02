@@ -10,7 +10,7 @@ function App() {
 
 
   return (
- 
+      <div className='app-container'>
         <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route element={<ProtectedRoutes/>}>
@@ -18,7 +18,7 @@ function App() {
              <Route path='pokedex/:id' element={<PokeIdPage/>}/>
           </Route>
         </Routes>
-      
+      </div>
   )
 }
 

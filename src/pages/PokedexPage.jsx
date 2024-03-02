@@ -47,8 +47,8 @@ const PokedexPage = () => {
       <section className='poke-header'>  <h3><span>Bienvenido {trainerName},</span> Aquí podrás encontrar tu pokemon favorito</h3>
       <div >
       <form onSubmit={handleSubmit}>
-        <input type="text" ref={textInput}/>
-        <button>Buscar</button>
+        <input className='poke-input' type="text" ref={textInput}/>
+        <button className='poke-button'>Buscar</button>
       </form>
       <SelectType
       setSelectValue={setSelectValue}
