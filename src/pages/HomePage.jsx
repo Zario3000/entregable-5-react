@@ -21,12 +21,14 @@ const HomePage = () => {
   return (
     <div className='home-container'>
       <img src="../../assets/image 11.svg" alt="logo" />
+      <div className='home-date'>
       <h1>¡Hola Entrenador!</h1>
       <h2>Para Poder Comenzar, Dame Tu Nombre</h2>
       <form  onSubmit={handleSubmit}>
         <input type="text" ref={textInput} placeholder='Tu nombre...' />
         <button>Comenzar</button>
       </form>
+      </div>
     </div>
   )
 }

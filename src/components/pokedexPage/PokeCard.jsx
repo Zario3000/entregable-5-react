@@ -20,6 +20,7 @@ const PokeCard = ({url}) => {
     }
    // console.log(pokemon)
   return (
+    <div className='poke-card-container'>
     <article onClick={handleClick} className='poke-card'>
         <div className={pokemon?.types[0].type.name}></div>
         <figure>
@@ -45,6 +46,7 @@ const PokeCard = ({url}) => {
             }
         </ul>
     </article>
+    </div>
   )
 }
 

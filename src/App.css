@@ -15,9 +15,10 @@ body{
   color: black;
 }
 .app-container{
-  
+  background-color: white;
   display: flex;
   justify-content: center;
+  
 }
 
 input,
