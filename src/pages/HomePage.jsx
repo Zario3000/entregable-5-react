@@ -20,6 +20,7 @@ const HomePage = () => {
 
   return (
     <div className='home-container'>
+      
       <h1>¡Hola Entrenador!</h1>
       <h2>Para Poder Comenzar, Dame Tu Nombre</h2>
       <form  onSubmit={handleSubmit}>
