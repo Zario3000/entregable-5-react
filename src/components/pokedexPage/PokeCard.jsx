@@ -13,7 +13,7 @@ const PokeCard = ({url}) => {
 
     }, [])
     
-    //console.log(url)
+    console.log(url.length)
     
     const handleClick = ()=>{
          navigate(`/pokedex/${pokemon.id}`)

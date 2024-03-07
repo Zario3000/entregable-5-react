@@ -24,7 +24,7 @@ const PokedexPage = () => {
 
   }, [selectValue])
   
-  
+
  const textInput = useRef();
  const handleSubmit = (event) =>{
        event.preventDefault()
