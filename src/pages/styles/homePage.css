@@ -1,11 +1,11 @@
 .home-container{
     background-color: white;
-    height: 100vh;
+    height: auto;
     display: flex;
     display: inline-block;
     justify-content: center;
-    align-items: center;
-    margin: 50% 0;
+    margin: 30px;
+   
 }
 form{
     display: flex;
@@ -19,5 +19,10 @@ button{
     background-color: red;
     padding: 0 5px;
     color: white;
+}
+img{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
 }
 

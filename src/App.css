@@ -14,12 +14,12 @@ body{
   background-color: white;
   color: black;
 }
-img{
-  display: inline-block;
-  max-height: 100%;
-  max-width: 100vh;
-  object-fit: contain;
+.app-container{
+  
+  display: flex;
+  justify-content: center;
 }
+
 input,
 button{
   display: inline-block;
