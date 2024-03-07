@@ -23,8 +23,11 @@
 }
 .poke-card figure{
     position: relative;
-    width: 150px;
+    
     z-index: 10;
+}
+.poke-card figure .pokecard-image{
+    width: 300px;
 }
 .poke-types{
     display: flex;

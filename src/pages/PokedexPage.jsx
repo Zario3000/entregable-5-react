@@ -44,6 +44,8 @@ const PokedexPage = () => {
 
   return (
     <div className='pokedex'>
+      <div className='container-image'><img className='image' src="../../assets/image 11.svg" alt="logo" /></div>
+      <div className='container-marge'></div>
       <section className='poke-header'>  <h3><span>Bienvenido {trainerName},</span> Aquí podrás encontrar tu pokemon favorito</h3>
       <div >
       <form onSubmit={handleSubmit}>
