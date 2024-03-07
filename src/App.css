@@ -14,14 +14,6 @@ body{
   background-color: white;
   color: black;
 }
-.app-container{
-  width: 100%;
-  height: 100vh;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 img{
   display: inline-block;
   max-height: 100%;
