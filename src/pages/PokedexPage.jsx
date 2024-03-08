@@ -5,8 +5,17 @@ import useFetch from '../hooks/useFetch'
 import PokeCard from '../components/pokedexPage/PokeCard'
 import SelectType from '../components/pokedexPage/SelectType'
 import "./styles/pokedexPage.css"
+import Pagination from '../components/pokedexPage/Pagination'
 
 const PokedexPage = () => {
+  //pagination
+ const [currentpage, setCurrentpage] = useState(1)
+ const [porPag, setPorPag] = useState(3)
+ const [products, setProducts] = useState([1, 2, 3, 4, 5])
+ const totalProducts = 5;
+ const lastIndex= currentpage * porPag
+ const firstIndex= lastIndex - porPag
+ //pagination
 
   const [selectValue, setSelectValue] = useState("allPokemons")
   const trainerName = useSelector(store=>store.trainerName)
@@ -32,7 +41,7 @@ const PokedexPage = () => {
        textInput.current.value = ""
  }
 
- //console.log(pokemons)
+ console.log(pokemons)
   const cbFilter = ()=>{
     if(pokemonName){
      return pokemons?.results.filter(element =>element.name.includes(pokemonName))
@@ -58,17 +67,29 @@ const PokedexPage = () => {
       </div>
       </section>
       <section className='poke-container'>
-        {
+      {
+      
           cbFilter()?.map(poke =>(
             <PokeCard
+            products={products}
+            firstIndex={firstIndex}
+            lastIndex={lastIndex}
             key={poke.url}
             url={poke.url}
             />
             
           ))
+        
+         
         }
       </section>
+      <Pagination
+      porPag={porPag}
+      currentpage={currentpage}
+      setCurrentpage={setCurrentpage}
+      totalProducts={totalProducts}
       
+      />
     </div>
   )
 }
