@@ -3,7 +3,7 @@ import useFetch from '../../hooks/useFetch'
 import { setPokemonName } from '../../store/slices/pokemonName.slice'
 import { useDispatch } from 'react-redux'
 
-const SelectType = ({setselectValue}) => {
+const SelectType = ({setSelectValue}) => {
 
 const [types, getTypes]=useFetch()
 const dispatch = useDispatch()
@@ -15,7 +15,7 @@ useEffect(() => {
 const textSelect = useRef()
 
 const handleChange = ()=>{
-     setselectValue(textSelect.current.value)
+     setSelectValue(textSelect.current.value)
      dispatch(setPokemonName(""))
 }
 

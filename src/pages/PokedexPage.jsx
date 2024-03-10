@@ -25,7 +25,7 @@ const PokedexPage = () => {
 
   useEffect(() => {
     if(selectValue==="allPokemons"){
-      const url = "https://pokeapi.co/api/v2/pokemon/?limit=5"
+      const url = "https://pokeapi.co/api/v2/pokemon/?limit=15"
       getPokemons(url)
     }else{
       getPerType(selectValue)
@@ -44,7 +44,7 @@ const PokedexPage = () => {
  console.log(pokemons)
   const cbFilter = ()=>{
     if(pokemonName){
-     return pokemons?.results.filter(element =>element.name.includes(pokemonName))
+     return pokemons?.results.filter(element => element.name.includes(pokemonName))
     }else{
       return pokemons?.results
     }
