@@ -8,20 +8,13 @@ import "./styles/pokedexPage.css"
 import Pagination from '../components/pokedexPage/Pagination'
 
 const PokedexPage = () => {
-  //pagination
- const [currentpage, setCurrentpage] = useState(1)
- const [porPag, setPorPag] = useState(3)
- const [products, setProducts] = useState([1, 2, 3, 4, 5])
- const totalProducts = 5;
- const lastIndex= currentpage * porPag
- const firstIndex= lastIndex - porPag
- //pagination
 
   const [selectValue, setSelectValue] = useState("allPokemons")
   const trainerName = useSelector(store=>store.trainerName)
   const pokemonName = useSelector(store=>store.pokemonName)
   const dispatch = useDispatch()
   const [pokemons, getPokemons, getPerType] = useFetch();
+  const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
     if(selectValue==="allPokemons"){
@@ -41,7 +34,17 @@ const PokedexPage = () => {
        textInput.current.value = ""
  }
 
- console.log(pokemons)
+ //console.log(pokemons)
+
+ //paginacion
+ const quantity = 5;
+ const second = currentPage * quantity;
+ const first = second - quantity;
+
+ const residentsPart = pokemons && pokemons.results.slice(first, second);
+ const totalPages = pokemons && Math.floor(pokemons.results.length/quantity)+1
+ //paginacion
+ console.log(totalPages)
   const cbFilter = ()=>{
     if(pokemonName){
      return pokemons?.results.filter(element => element.name.includes(pokemonName))
@@ -67,13 +70,16 @@ const PokedexPage = () => {
       </div>
       </section>
       <section className='poke-container'>
+      <Pagination
+       currentPage={currentPage}
+       setCurrentPage={setCurrentPage}
+       totalPages={totalPages}
+      
+      />
       {
       
-          cbFilter()?.map(poke =>(
+      residentsPart?.map(poke =>(
             <PokeCard
-            products={products}
-            firstIndex={firstIndex}
-            lastIndex={lastIndex}
             key={poke.url}
             url={poke.url}
             />
@@ -84,10 +90,9 @@ const PokedexPage = () => {
         }
       </section>
       <Pagination
-      porPag={porPag}
-      currentpage={currentpage}
-      setCurrentpage={setCurrentpage}
-      totalProducts={totalProducts}
+       currentPage={currentPage}
+       setCurrentPage={setCurrentPage}
+       totalPages={totalPages}
       
       />
     </div>

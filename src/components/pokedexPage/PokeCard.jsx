@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import "./styles/pokeCard.css"
 
 
-const PokeCard = ({products, firstIndex, lastIndex, url}) => {
+const PokeCard = ({ url}) => {
 
     const [pokemon, getPokemon]=useFetch()
     const navigate = useNavigate()
@@ -23,7 +23,7 @@ const PokeCard = ({products, firstIndex, lastIndex, url}) => {
   return (
     <div className='poke-card-container'>
     
-    <article onClick={handleClick} className='poke-card'>
+    <article onClick={handleClick} className='poke-card '>
         <div className={pokemon?.types[0].type.name}></div>
         <figure>
         <img className='pokecard-image' src={pokemon?.sprites.other["official-artwork"].front_default} alt="pokemon photo" />

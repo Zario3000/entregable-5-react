@@ -7,7 +7,7 @@
     box-shadow: 3px 3px 8px #000000, -3px -3px 8px #000000;
 }
 .poke-card{
-    background-color: orangered;
+    background-color: white;
     border: 5px solid;
     width: 250px;
     display: flex;
@@ -29,6 +29,7 @@
    width: 100%;
    height: 100px;
    border-radius: 20px 20px 0 0;
+   
 }
 .poke-card figure{
     position: relative;
@@ -71,4 +72,49 @@
 }
 .water{
     background-color: skyblue;
+}
+.bug{
+    background-color: lightgreen;
+}
+.normal{
+    background-color: sienna;
+}
+.dark{
+    background-color: #000000;
+}
+.rock{
+    background-color: gray;
+}
+.fighting{
+    background-color: rgb(168, 70, 45);
+}
+.ground{
+    background-color: rgb(113, 73, 14);
+}
+.ghost{
+    background-color:rgb(59, 62, 130) ;
+}
+.electric{
+    background-color:rgb(26, 33, 152) ;
+}
+.steel{
+    background-color: rgb(102, 124, 116);
+}
+.psychic{
+    background-color: rgb(102, 124, 116);
+}
+.ice{
+   background-color: skyblue; 
+}
+.dragon{
+    background-color: orangered;
+}
+.fairy{
+    background-color: pink;
+}
+.poison{
+    background-color: rgb(112, 64, 159);
+}
+.flying{
+    background-color: rgb(77, 148, 158);
 }

@@ -1,27 +1,26 @@
 import React from 'react'
 
-
-
-const Pagination = ({porPag, currentpage, setCurrentpage,totalProducts}) => {
-
-const pageNumbers=[1, 2]
-const handleNext=()=>{
-  setCurrentpage(currentpage+1)
+const Pagination = ({currentPage, setCurrentPage, totalPages}) => {
+const handlePrev= ()=>{
+  if(currentPage>1){
+    setCurrentPage(currentPage-1)
+  }
 }
-const handlePrevi = ()=>{
-  setCurrentpage(currentpage-1)
+const handleNext = ()=>{
+  if(currentPage<totalPages){
+    setCurrentPage(currentPage+1)
+  }
 }
-const handleSpeci = (n)=>{
-  setCurrentpage(n)
-}
+
 
 
   return (
-    <div>
-       
-        
+    <div className='pagination'>
+       <button onClick={handlePrev}>Prev</button>
+       <span>{`${currentPage} / ${totalPages}`}</span>
+       <button onClick={handleNext}>Next</button>
     </div>
   )
 }
 
-export default Pagination
+export default Pagination;

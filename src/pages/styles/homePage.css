@@ -7,6 +7,7 @@
     margin: 30px;
    
 }
+
 form{
     display: flex;
     padding: 0 50px;
@@ -22,15 +23,31 @@ button{
     padding: 0 5px;
     color: white;
 }
-img{
+.home-container img{
+    max-width: 80vh;
+    min-width: 20px;
     display: flex;
     justify-content: center;
     padding: 30px;
+    margin: 0 auto;
 }
 .home-date{
     
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+@media ( max-width: 430px ){
+    .home-container{
+        display: flex;
+        display: inline-block;
+        align-items: center;
+        
+    }
+    .home-container img{
+        max-width: 350px;
+        min-width: 20px;
+        margin: 0 auto;
+    }
 }
 
